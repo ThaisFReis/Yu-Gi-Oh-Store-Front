@@ -1,0 +1,108 @@
+.singup{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.singup  h1{
+    color: #161616;
+    text-align: center;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.singup form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5vh;
+}
+
+.singup form label{
+    color: #161616;
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin: 1vh auto 1vh 0;
+}
+
+.singup form input{
+    width: 20vw;
+    height: 4vh;
+    margin: 0vh 0 1vh 0;
+
+    border-radius: 0.5vw;
+    border: #161616 1px solid;
+
+    color: #F1EFD6;
+
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.singup form input:focus,
+.singup form input:active,
+.singup form input:hover{
+    outline: none;
+    border: 2px solid #161616;
+
+    transform: scale(1.05);
+}
+
+.singup form input::placeholder{
+    color: #161616;
+}
+
+.singup form button{
+    width: 12vw;
+    height: 5vh;
+    margin: 1.5vh auto 1vh auto;
+
+    border-radius: 0.5vw;
+    border: none;
+    background-color: #161616;
+    color: #F1EFD6;
+
+    font-size: 0.9vw;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05vw;
+
+    cursor: pointer;
+}
+
+.singup form button:hover{
+    background-color: #535353;
+}
+
+.singup button{
+    background-color: transparent;
+    border: none;
+
+    width: 9.5vw;
+    height: fit-content;
+
+    margin: 0 auto 2vh auto;
+
+    cursor: pointer;
+}
+
+.singup button a{
+    color: #161616;
+    font-size: 0.7vw;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.07vw;
+}
+
+.singup button a:hover{
+    color: #535353;
+}
