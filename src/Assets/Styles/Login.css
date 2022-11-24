@@ -1,0 +1,108 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login  h1{
+    color: #161616;
+    text-align: center;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5vh;
+}
+
+.login form label{
+    color: #161616;
+    font-size: 1.5vw;
+    font-weight: 700;
+    margin: 1vh auto 1vh 0;
+}
+
+.login form input{
+    width: 20vw;
+    height: 4vh;
+    margin: 0vh 0 1vh 0;
+
+    border-radius: 0.5vw;
+    border: #161616 1px solid;
+
+    color: #F1EFD6;
+
+    font-size: 1vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login form input:focus,
+.login form input:active,
+.login form input:hover{
+    outline: none;
+    border: 2px solid #161616;
+
+    transform: scale(1.05);
+}
+
+.login form input::placeholder{
+    color: #161616;
+}
+
+.login form button{
+    width: 12vw;
+    height: 5vh;
+    margin: 1.5vh auto 1vh auto;
+
+    border-radius: 0.5vw;
+    border: none;
+    background-color: #161616;
+    color: #F1EFD6;
+
+    font-size: 0.9vw;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05vw;
+
+    cursor: pointer;
+}
+
+.login form button:hover{
+    background-color: #535353;
+}
+
+.login button{
+    background-color: transparent;
+    border: none;
+
+    width: 9.5vw;
+    height: fit-content;
+
+    margin: 0 auto 2vh auto;
+
+    cursor: pointer;
+}
+
+.login button a{
+    color: #161616;
+    font-size: 0.7vw;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.07vw;
+}
+
+.login button a:hover{
+    color: #535353;
+}

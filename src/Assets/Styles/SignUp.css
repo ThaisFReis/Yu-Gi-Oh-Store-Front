@@ -1,4 +1,4 @@
-.singup{
+.signup{
     width: 100vw;
     height: 100vh;
 
@@ -9,7 +9,7 @@
 
 }
 
-.singup  h1{
+.signup  h1{
     color: #161616;
     text-align: center;
     font-size: 3vw;
@@ -17,7 +17,7 @@
     font-weight: 700;
 }
 
-.singup form{
+.signup form{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,14 +26,14 @@
     margin-top: 5vh;
 }
 
-.singup form label{
+.signup form label{
     color: #161616;
     font-size: 1.5vw;
     font-weight: 700;
     margin: 1vh auto 1vh 0;
 }
 
-.singup form input{
+.signup form input{
     width: 20vw;
     height: 4vh;
     margin: 0vh 0 1vh 0;
@@ -48,20 +48,20 @@
     text-align: center;
 }
 
-.singup form input:focus,
-.singup form input:active,
-.singup form input:hover{
+.signup form input:focus,
+.signup form input:active,
+.signup form input:hover{
     outline: none;
     border: 2px solid #161616;
 
     transform: scale(1.05);
 }
 
-.singup form input::placeholder{
+.signup form input::placeholder{
     color: #161616;
 }
 
-.singup form button{
+.signup form button{
     width: 12vw;
     height: 5vh;
     margin: 1.5vh auto 1vh auto;
@@ -79,11 +79,11 @@
     cursor: pointer;
 }
 
-.singup form button:hover{
+.signup form button:hover{
     background-color: #535353;
 }
 
-.singup button{
+.signup button{
     background-color: transparent;
     border: none;
 
@@ -95,7 +95,7 @@
     cursor: pointer;
 }
 
-.singup button a{
+.signup button a{
     color: #161616;
     font-size: 0.7vw;
     font-weight: bold;
@@ -103,6 +103,6 @@
     letter-spacing: 0.07vw;
 }
 
-.singup button a:hover{
+.signup button a:hover{
     color: #535353;
 }

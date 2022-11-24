@@ -7,10 +7,11 @@ import './Assets/Styles/App.css';
 
 // Pages
 import Home from './Pages/Home';
-import SingUp from './Pages/SingUp';
-
+import SignUp from './Pages/SignUp';
+import Login from './Pages/LogIn';
 // Context
 import userContext from './Contexts/userContext';
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,7 +21,8 @@ function App() {
       <userContext.Provider value={{ user, setUser }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/singup" element={<SingUp />} />
+          <Route path='/login' element={<Login/>} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </userContext.Provider>
     </BrowserRouter>
