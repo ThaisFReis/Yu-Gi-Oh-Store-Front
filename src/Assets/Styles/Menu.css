@@ -1,9 +1,9 @@
 .menu{
-    background-color: #161616;
+    background-color: #000000;
     color: #F1EFD6;
-
+    box-shadow: #000000 0px 0px 10px 0px;
     width: 100vw;
-    height: 7vh;
+    height: 10vh;
 
     position: absolute;
     top: 0;
@@ -13,6 +13,12 @@
     flex-direction: row;
     justify-content: right;
     align-items: center;
+}
+
+.menu .title{
+    margin: auto 12vw;
+    font-size: 3em;
+    font-weight: 100;
 }
 
 .menu ul{
@@ -33,4 +39,24 @@
     align-items: center;
 
     font-size: 1vw;
+}
+
+.menu .user{
+    background-color: hotpink;
+    width: 5vw;
+    height: 4vh;
+
+    margin: auto 1vw;
+    padding: 0.5vw 0.7vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1vw;
+}
+
+.menu .user ion-icon{
+    color: #F1EFD6;
+    font-size: 2vw;
 }
