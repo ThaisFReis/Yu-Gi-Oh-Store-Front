@@ -1,0 +1,9 @@
+.popUp{
+    top: 7vh;
+    width: 20vw;
+    background-color: red;
+}
+
+.popUp >img{
+    width: 5vw;
+}

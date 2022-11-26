@@ -9,8 +9,10 @@ import './Assets/Styles/App.css';
 import Home from './Pages/Home';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/LogIn';
+
 // Context
 import userContext from './Contexts/userContext';
+
 
 
 function App() {
