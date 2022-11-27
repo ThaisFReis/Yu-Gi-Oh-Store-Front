@@ -10,7 +10,7 @@ export default function PopupWindow() {
     const [hasItems, setHasItems] = useState(false)
     const arrayTeste = [0, 1, 2, 3, 4];
     const offset = ({ placement, popper }) => {
-        if (placement === 'center left') {
+        if (placement === 'center') {
             return [0, popper.height / 2]
         }
 
@@ -19,7 +19,7 @@ export default function PopupWindow() {
 
     return (
         <div className='option' >
-            <Popup trigger={<a>Carrinho</a>} position="center" on="click" offset={offset} style={{ marginTop: "3vh" }} className='popUp'>
+            <Popup trigger={<a>Carrinho</a>} position="bottom left" on="click" offset={offset} style={{ marginTop: "3vh" }} className='popUp'>
                 {hasItems === false ? 
                 <>
                     <h1>Você ainda não adicionou nada no carrinho</h1>

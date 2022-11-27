@@ -26,6 +26,7 @@
     border: #161616 1px solid;
     box-shadow: 1px 1px 0 0;
     overflow-y: scroll;
+    background-color: white;
 }
 .popUp h1{
     font-size: 25px;

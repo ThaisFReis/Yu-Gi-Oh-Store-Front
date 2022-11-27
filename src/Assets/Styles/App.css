@@ -1,5 +1,7 @@
 body{
-   width: 100vw;
+    background-color: #0f0a0a;
+
+    width: 100vw;
     height: 100vh;
 
     display: flex;

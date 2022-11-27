@@ -1,25 +1,26 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React from "react"
+import React, { useState } from "react"
 
 // CSS
 import './Assets/Styles/App.css';
 
-// Pages
-import Home from './Pages/Home';
-import SignUp from './Pages/SignUp';
-import Login from './Pages/LogIn';
-
+// Components
+import Home from './Components/Home'
+import SignUp from './Components/SignUp';
+import Login from './Components/Login';
 // Context
-import { UserProvider } from './Contexts/userContext';
-import { AuthProvider } from './Contexts/authContext';
 
-
+import { authContext } from './Contexts/authContext';
+import { userContext } from './Contexts/userContext';
 
 function App() {
 
+  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
+
   return (
-    <AuthProvider>
-      <UserProvider>
+    <authContext.Provider value={{ token, setToken }} >
+      <userContext.Provider value={{ user, setUser }} >
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -27,8 +28,8 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
           </Routes>
         </BrowserRouter>
-      </UserProvider>
-    </AuthProvider>
+      </userContext.Provider>
+    </authContext.Provider>
   );
 }
 

@@ -10,8 +10,8 @@ import Menu from '../Menu';
 import '../../Assets/Styles/Login.css';
 
 // Contexts
-import userContext from '../../Contexts/userContext';
-import authContext from '../../Contexts/authContext';
+import { authContext } from '../../Contexts/authContext';
+import { userContext } from '../../Contexts/userContext';
 
 function Login() {
 
