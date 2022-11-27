@@ -1,5 +1,6 @@
 .menu{
-    background-color: #000000;
+    box-sizing: border-box;
+    background-color: #161616;
     color: #F1EFD6;
     box-shadow: #000000 0px 0px 10px 0px;
     width: 100vw;
