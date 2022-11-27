@@ -5,10 +5,11 @@ import { useState } from "react"
 // CSS
 import './Assets/Styles/App.css';
 
-// Pages
-import Home from './Pages/Home';
-import SignUp from './Pages/SignUp';
-import Login from './Pages/LogIn';
+// Components
+import Home from './Components/Home'
+import SignUp from './Components/SignUp';
+import Login from './Components/Login';
+
 // Context
 import { userContext } from './Contexts/userContext';
 
@@ -21,7 +22,7 @@ function App() {
       <userContext.Provider value={{ user, setUser }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path='/login' element={<Login/>} />
+          <Route path='/login' element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
       </userContext.Provider>

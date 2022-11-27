@@ -1,0 +1,38 @@
+.products{
+    background-color: yellowgreen;
+
+    width: 80vw;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+    margin: 0 auto;
+
+    border: 1px solid black;
+
+    padding: 1rem;
+
+    overflow: auto;
+}
+
+.products .product{
+    background-color: palevioletred;
+
+    width: 20vw;
+    height: 30vh;
+
+    margin: 1rem;
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
