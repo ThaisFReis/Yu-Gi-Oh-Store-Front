@@ -4,11 +4,12 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // css
-import '../Assets/Styles/PopUp.css';
+import '../../Assets/Styles/PopUp.css';
 
 export default function PopupWindow() {
     const [hasItems, setHasItems] = useState(false)
     const arrayTeste = [0, 1, 2, 3, 4];
+
     const offset = ({ placement, popper }) => {
         if (placement === 'center') {
             return [0, popper.height / 2]

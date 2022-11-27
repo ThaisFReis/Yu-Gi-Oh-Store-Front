@@ -1,8 +1,8 @@
 import { Button, Grid, Header, Popup } from 'semantic-ui-react';
-import exemploCarta from "../Assets/Images/download.jpeg";
+import exemploCarta from "../../Assets/Images/download.jpeg";
 
 //css
-import "../Assets/Styles/PopUpItem.css"
+import "../../Assets/Styles/PopUpItem.css"
 
 export default function popUpItem() {
     return (
