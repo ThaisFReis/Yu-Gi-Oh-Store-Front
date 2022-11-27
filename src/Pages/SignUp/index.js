@@ -2,6 +2,9 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
+// URL da API
+import { API_URL } from '../../Constants/ApiUrl.js';
+
 // Menu
 import Menu from '../Menu';
 
@@ -27,7 +30,7 @@ function SignUp() {
     }
 
     try {
-      await axios.post("http://localhost:5000/signup", body);
+      await axios.post(`${API_URL}/auth/signup`, body);
       console.log("Cadastro realizado com sucesso!");
 
       navigate("/login");

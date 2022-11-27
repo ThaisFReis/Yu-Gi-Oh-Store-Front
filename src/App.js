@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from "react"
-import { useState } from "react"
 
 // CSS
 import './Assets/Styles/App.css';
@@ -11,23 +10,25 @@ import SignUp from './Pages/SignUp';
 import Login from './Pages/LogIn';
 
 // Context
-import userContext from './Contexts/userContext';
+import { UserProvider } from './Contexts/userContext';
+import { AuthProvider } from './Contexts/authContext';
 
 
 
 function App() {
-  const [user, setUser] = useState(null);
 
   return (
-    <BrowserRouter>
-      <userContext.Provider value={{ user, setUser }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path='/login' element={<Login/>} />
-          <Route path="/signup" element={<SignUp />} />
-        </Routes>
-      </userContext.Provider>
-    </BrowserRouter>
+    <AuthProvider>
+      <UserProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+          </Routes>
+        </BrowserRouter>
+      </UserProvider>
+    </AuthProvider>
   );
 }
 

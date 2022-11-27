@@ -1,6 +1,7 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { API_URL } from '../../Constants/ApiUrl';
 
 // Menu
 import Menu from '../Menu';
@@ -8,8 +9,14 @@ import Menu from '../Menu';
 // CSS
 import '../../Assets/Styles/Login.css';
 
+// Contexts
+import userContext from '../../Contexts/userContext';
+import authContext from '../../Contexts/authContext';
+
 function Login() {
 
+    const { setUser } = useContext(userContext);
+    const {setToken} = useContext(authContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -24,12 +31,12 @@ function Login() {
         }
 
         try {
-            await axios.post("http://localhost:5000/login", body);
-            console.log("Log-in realizado com sucesso!");
-
+            const promise = await axios.post(`${API_URL}/auth/login`, body);
+            setUser(promise.data.name)
+            setToken(promise.data.token)
             navigate("/");
         } catch (error) {
-            alert("Erro ao cadastrar");
+            alert("Erro ao fazer o login");
             console.log(error);
         }
     }

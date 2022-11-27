@@ -1,9 +1,54 @@
+.option a{
+    font-size: 1vw;
+    color: white;
+    margin: 0 auto;
+}
+
+.option a:hover{
+    cursor: pointer;
+}
+
+.popUp li, strong{
+    color: black;
+}
+
+.popUp Link{
+    color: black;
+}
+
 .popUp{
     top: 7vh;
     width: 20vw;
-    background-color: red;
+    max-height: 50vh;
+    margin: 1vh;
+    padding: 1vh;
+    border-radius: 0.5vw;
+    border: #161616 1px solid;
+    box-shadow: 1px 1px 0 0;
+    overflow-y: scroll;
+}
+.popUp h1{
+    font-size: 25px;
+    margin-bottom: 1vh;
+    color: black;
+    font-weight: 700;
 }
 
-.popUp >img{
+.popUp h4{
+    margin-bottom: 1vh;
+    color: black;
+}
+
+.popUp img{
     width: 5vw;
 }
+
+.popUp Button{
+    background-color: lightgray;
+    border: none;
+    border-radius: 0.5vw;
+    width: 100%;
+    height: 5vh;
+    font-size: 20px;
+}
+

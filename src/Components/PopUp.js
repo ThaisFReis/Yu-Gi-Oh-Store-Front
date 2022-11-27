@@ -1,26 +1,41 @@
-import { Button, Grid, Header, Popup } from 'semantic-ui-react';
-import exemploCarta from "../Assets/Images/download.jpeg";
+import { Button, Popup } from 'semantic-ui-react';
+import PopUpItem from './PopUpItem';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // css
 import '../Assets/Styles/PopUp.css';
 
 export default function PopupWindow() {
+    const [hasItems, setHasItems] = useState(false)
+    const arrayTeste = [0, 1, 2, 3, 4];
+    const offset = ({ placement, popper }) => {
+        if (placement === 'center left') {
+            return [0, popper.height / 2]
+        }
+
+        return []
+    }
+
     return (
-        <Popup trigger={<p>Carrinho</p>} position="bottom left" style={{marginTop: "3vh"}}>
-            <Grid.Column textAlign='center' className='popUp'>
-                <Header as='h4'>Basic Plan</Header>
-                <p>
-                    <b>2</b> projects, $10 a month
-                </p>
-                <Button>Choose</Button>
-            </Grid.Column>
-            <Grid.Column textAlign='center' className='popUp'>
-                <Header as='h4'>Basic Plan</Header>
-                <p>
-                    <b>2</b> projects, $10 a month
-                </p>
-                <Button>Choose</Button>
-            </Grid.Column>
-        </Popup>
+        <div className='option' >
+            <Popup trigger={<a>Carrinho</a>} position="center" on="click" offset={offset} style={{ marginTop: "3vh" }} className='popUp'>
+                {hasItems === false ? 
+                <>
+                    <h1>Você ainda não adicionou nada no carrinho</h1>
+                    <Button><Link to="/" style={{color: "black", fontWeight: 700}}>Ir para a Home</Link></Button>
+                </>
+                :
+                <>
+                    <h1>Seu carrinho: </h1>
+                    {arrayTeste.map((a) => {
+                        return (
+                            <PopUpItem />
+                        )
+                    })}
+                    <Button>Fechar Compra</Button>
+                </>}
+            </Popup>
+        </div>
     )
 }
