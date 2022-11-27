@@ -10,7 +10,7 @@ import Home from './Pages/Home';
 import SingUp from './Pages/SingUp';
 
 // Context
-import userContext from './Contexts/userContext';
+import { userContext } from './Contexts/userContext';
 
 function App() {
   const [user, setUser] = useState(null);
