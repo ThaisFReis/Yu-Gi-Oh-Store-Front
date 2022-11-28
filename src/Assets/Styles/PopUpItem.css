@@ -1,0 +1,26 @@
+.popUpItem{
+    margin-bottom: 1vh;
+}
+
+.popUpItem .breakLine{
+    margin-top: 1vh;
+    width: 100%;
+    height: 1px;
+    border: solid 1px;
+}
+
+.popUpItem .popUpContent{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.popUpItem .description{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vh;
+}
+
+.description li{
+    list-style-type: none;
+    margin-bottom: 1vh;
+}
