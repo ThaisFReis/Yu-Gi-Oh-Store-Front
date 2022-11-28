@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import { authContext } from '../../Contexts/authContext'; 
 
 // CSS
 import "../../Assets/Styles/Products.css";
@@ -8,7 +9,7 @@ import "../../Assets/Styles/Products.css";
 import Coin from "../../Assets/Img/coin.png";
 
 export default function Products() {
-
+    const {token} = useContext(authContext);
     const [productData, setProductData] = useState([]);
     const [chooseCategory, setChooseCategory] = useState("");
 
@@ -26,6 +27,14 @@ export default function Products() {
     }
     , []);
 
+    function addToCart(id){
+        axios.post(`https://yu-gi-oh-api.onrender.com/products/${id}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+    }
+
     return (
         <>   
             <div className="categories">
@@ -40,7 +49,7 @@ export default function Products() {
                 {productData.map((product) => {
                     if (chooseCategory === "todas" || chooseCategory === "") {
                         return (
-                            <div className="product" key={product.id}>
+                            <div className="product" key={product._id}>
                                 <div className="product-category">{product.category}</div>
                                 <div className="product-name">{product.name}</div>
                                 <img src={product.image} alt={product.name} />
@@ -49,7 +58,7 @@ export default function Products() {
                                         <img src={Coin} alt="coin" />
                                         <p>{product.price}</p>
                                     </div>
-                                    <button className="product-button">
+                                    <button className="product-button" onClick={() => addToCart(product._id)} >
                                         <ion-icon name="cart-outline"></ion-icon>
                                         <p>Comprar</p>
                                     </button>

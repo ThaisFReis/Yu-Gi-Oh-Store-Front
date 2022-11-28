@@ -13,19 +13,13 @@ import { userContext } from '../../Contexts/userContext.js';
 function Menu() {
     
     const { user, setUser } = useContext(userContext);
+    const [hasItems, setHasItems] = useState(true);
     const navigate = useNavigate();
-    const [carrinho, setCarrinho] = useState(true);
 
     function logOut(){
-        setUser("");
-        navigate("/login")
-    }
-    
-    function showCart() {
-        setCarrinho(!carrinho)
-        if (carrinho === true) {
-            alert(carrinho)
-        }
+        setUser(null);
+        setHasItems(false);
+        navigate("/login");
     }
     return (
         <div className="menu">
@@ -40,7 +34,7 @@ function Menu() {
                             login
                         </li>
                     </Link>
-                    <li><PopupWindow /></li>
+                    <li><PopupWindow hasItems={hasItems} setHasItems={setHasItems} /></li>
                 </ul> 
             :
                 <ul>

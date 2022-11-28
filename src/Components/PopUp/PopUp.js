@@ -1,14 +1,23 @@
 import { Button, Popup } from 'semantic-ui-react';
 import PopUpItem from './PopUpItem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // css
 import '../../Assets/Styles/PopUp.css';
+import axios from 'axios';
 
-export default function PopupWindow() {
-    const [hasItems, setHasItems] = useState(false)
-    const arrayTeste = [0, 1, 2, 3, 4];
+export default function PopupWindow({hasItems, setHasItems}) {
+    
+    const [carrinho, setCarrinho] = useState([])
+    useEffect(() => {
+        axios.get("https://yu-gi-oh-api.onrender.com/products/cart")
+        .then((res)=>{
+            setHasItems(true)
+            setCarrinho(res.data)
+        })
+
+    }, [])
 
     const offset = ({ placement, popper }) => {
         if (placement === 'center') {
@@ -29,9 +38,9 @@ export default function PopupWindow() {
                 :
                 <>
                     <h1>Seu carrinho: </h1>
-                    {arrayTeste.map((a) => {
+                    {carrinho.map((item) => {
                         return (
-                            <PopUpItem />
+                            <PopUpItem item={item} />
                         )
                     })}
                     <Button>Fechar Compra</Button>
