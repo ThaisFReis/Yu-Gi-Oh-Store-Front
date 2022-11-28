@@ -50,10 +50,6 @@ function Menu() {
                     <li><PopupWindow /></li>
                 </ul>
             }
-            <div className="user">
-                <ion-icon name="person-circle-outline"></ion-icon>
-                <Link to="/login">Login</Link>
-            </div>
         </div>
     )
 }
