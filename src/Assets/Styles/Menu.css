@@ -16,47 +16,53 @@
 }
 
 .menu .title{
-    margin: auto 12vw;
-    font-size: 3em;
-    font-weight: 100;
+    margin: calc(50vw - 50vh);
+    font-size: 2.5vw;
+    font-weight: 700;
 }
 
 .menu ul{
-    width: 30vw;
+    width: 20vw;
     height: 7vh;
 
     display: flex;
+    flex-direction: row;
+    justify-content: left;
 }
-.menu li{
-    width: 5vw;
+.menu ul li{
+    width: fit-content;
     height: 4vh;
 
     margin: auto 1vw;
     padding: 0.5vw 0.7vw;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 1vw;
-}
-
-.menu .user{
-    background-color: hotpink;
-    width: 5vw;
-    height: 4vh;
-
-    margin: auto 1vw;
-    padding: 0.5vw 0.7vw;
+    border-radius: 5px;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 1vw;
     align-items: center;
 
-    font-size: 1vw;
+    cursor: pointer;
 }
 
-.menu .user ion-icon{
+.menu ul > a{
+    color: #F1EFD6;
+    font-size: 1.2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu ul li ion-icon{
     color: #F1EFD6;
     font-size: 2vw;
+}
+
+.menu li:hover{
+    background-color: #F1EFD6;
+    color: #000000;
+}
+
+.menu li:hover > ion-icon{
+    color: #000000;
 }

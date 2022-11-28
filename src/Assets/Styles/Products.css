@@ -1,38 +1,243 @@
-.products{
-    background-color: yellowgreen;
+/* --------------- CATEGORIES --------------- */
+.categories{
+    border: #cccccc 1px solid;
+    border-radius: 10px;
 
+    width: 82vw;
+    height: 10.5vh;
+    margin: 15vh auto auto auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.categories p{
+    background-color: #F1EFD6;
+    border-radius: 10px 0 0 10px;
+
+    width: 10.5vw;
+    height: 9vh;
+    padding: 0.4vw;
+    margin-left: 0;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    color: #161616;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.categories button{
+    background-color: transparent;
+    border: none;
+
+    width: 17.68vw;
+    height: 10.5vh;
+    margin: auto auto;
+
+    color: #F1EFD6;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.categories button:hover{
+    background-color: #F1EFD6;
+
+    color: #161616;
+}
+
+/* --------------- PRODUCTS --------------- */
+
+.products{
     width: 80vw;
-    height: 70vh;
+    height: fit-content;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
+    justify-content: center;
+    gap: 2.5vw;
 
-    margin: 0 auto;
-
-    border: 1px solid black;
-
-    padding: 1rem;
+    margin: 5vh auto;
 
     overflow: auto;
 }
 
 .products .product{
-    background-color: palevioletred;
-
+    background-color: #afafaf;
     width: 20vw;
-    height: 30vh;
+    height: 60vh;
 
     margin: 1rem;
 
-    border: 1px solid black;
+    border: 1px solid #000;
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     align-content: center;
+}
+
+.products .product .product-category{
+    background-color: #161616;
+    border: 1px solid #1616167e;
+    border-radius: 5px;
+
+    width: fit-content;
+    padding: 0.3vw;
+
+    margin-left: auto;
+    margin-right: 3vw;
+    margin-top: 2vh;
+    margin-bottom: 1.5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    color: #F1EFD6;
+    font-size: 0.7vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.products .product .product-name{
+    width: 15vw;
+
+    margin-top: 0.5vh;
+    margin-bottom: 1.5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    color: #161616;
+    font-size: 1.1vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.products .product img{
+    width: 14vw;
+    height: fit-content;
+
+    border: 2px solid #1616161a;
+    border-radius: 5px;
+    box-shadow: #1616161a 0px 1px 5px 0px;
+}
+
+.products .product .product-price{    
+    width: fit-content;
+    padding: 0.5vw;
+    margin-left: auto;
+    margin-right: 3vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; 
+}
+
+.products .product .product-footer{
+    background-color: #f1efd683;
+
+    border-radius: 0 0 10px 10px;
+
+    width: 20vw;
+    height: 7vh;
+
+    margin-top: auto;
+    margin-bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.products .product .product-footer .product-price{
+    width: fit-content;
+    height: fit-content;
+
+    margin-left: 3vw;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.products .product .product-footer .product-price img{
+    width: 1.7vw;
+    height: fit-content;
+
+    margin-right: 0.7vw;
+
+    border: none;
+    box-shadow: none;
+}
+
+.products .product .product-footer .product-price p{
+    color: #161616;
+    font-size: 1.1vw;
+    font-weight: bold; 
+}
+
+.products .product .product-footer .product-button{
+    background-color: #161616;
+    border: 1px solid #1616167e;
+    border-radius: 5px;
+
+    width: 7.5vw;
+    height: 5vh;
+
+    margin-left: auto;
+    margin-right: 3vw;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5vw;
+    align-items: center;
+    align-content: center;
+
+    cursor: pointer;
+}
+
+.products .product .product-footer .product-button ion-icon{
+    color: #b59ddb;
+    font-size: 1.2vw;
+}
+
+.products .product .product-footer .product-button p{
+    color: #F1EFD6;
+    font-size: 0.8vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.products .product .product-footer .product-button:hover{
+    background-color: #b59ddb;
+    border: 1px solid #f1efd6cb;
+}
+
+.products .product .product-footer .product-button:hover ion-icon{
+    color: #161616;
+}
+
+.products .product .product-footer .product-button:hover p{
+    color: #161616;
 }

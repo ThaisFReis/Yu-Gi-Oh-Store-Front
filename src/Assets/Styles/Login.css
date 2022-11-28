@@ -1,6 +1,9 @@
 .login{
-    width: 100vw;
-    height: 100vh;
+    border-radius: 10px;
+    width: 50vw;
+    height: 70vh;
+
+    margin: calc(15vh) auto;
 
     display: flex;
     flex-direction: column;
@@ -9,41 +12,50 @@
 
 }
 
-.login  h1{
-    color: #161616;
+.login  h2{
+    margin-top: 7vh;
+    margin-bottom: 9vh;
+
+    color: #F1EFD6;
     text-align: center;
-    font-size: 3vw;
+    font-size: 3.5vw;
     text-transform: uppercase;
     font-weight: 700;
 }
 
 .login form{
+    width: 20.5vw;
+    height: fit-content;
+
+    margin: 0 auto;
+    
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    margin-top: 5vh;
 }
 
 .login form label{
-    color: #161616;
+    margin: 1vh auto 1vh 0;
+
+    color: #F1EFD6;
     font-size: 1.5vw;
     font-weight: 700;
-    margin: 1vh auto 1vh 0;
+    text-transform: uppercase;
 }
 
 .login form input{
     width: 20vw;
-    height: 4vh;
+    height: 5vh;
     margin: 0vh 0 1vh 0;
 
     border-radius: 0.5vw;
     border: #161616 1px solid;
 
-    color: #F1EFD6;
+    color: #161616;
 
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: bold;
     text-align: center;
 }
@@ -68,13 +80,14 @@
 
     border-radius: 0.5vw;
     border: none;
-    background-color: #161616;
-    color: #F1EFD6;
+    background-color: #F1EFD6;
+    color: #161616;
 
     font-size: 0.9vw;
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.05vw;
+    text-transform: uppercase;
 
     cursor: pointer;
 }
@@ -87,16 +100,16 @@
     background-color: transparent;
     border: none;
 
-    width: 9.5vw;
+    width: 12vw;
     height: fit-content;
-
-    margin: 0 auto 2vh auto;
+    padding: 0.5vw;
+    margin: 0 auto 12vh auto;
 
     cursor: pointer;
 }
 
 .login button a{
-    color: #161616;
+    color: #F1EFD6;
     font-size: 0.7vw;
     font-weight: bold;
     text-align: center;

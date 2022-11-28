@@ -10,14 +10,16 @@ function Menu(){
                 <h1>Yu-Gi-Oh Store</h1>
             </div>
             <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/login">Login</Link></li>
-                <li><Link to="/signup">Cadastro</Link></li>
+                <Link to="/">
+                <li>Home</li>
+                </Link>
+                <Link to="/login">
+                    <li>
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        login
+                    </li>
+                </Link>
             </ul>
-            <div className="user">
-                <ion-icon name="person-circle-outline"></ion-icon>
-                <Link to="/login">Login</Link>
-            </div>
         </div>
     )
 }

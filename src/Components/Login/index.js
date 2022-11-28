@@ -37,7 +37,7 @@ function Login() {
     return (
         <div className="login">
             <Menu />
-            <h1>Log-in</h1>
+            <h2>Log-in</h2>
             <form onSubmit={handleSubmit} >
                 <label htmlFor="email">Email:</label>
                 <input type="email" name="email" id="email" placeholder='Digite seu email' value={email} onChange={e => setEmail(e.target.value)} />
