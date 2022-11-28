@@ -23,12 +23,13 @@
 }
 
 .menu ul{
-    width: 20vw;
+    width: fit-content;
     height: 7vh;
 
     display: flex;
     flex-direction: row;
     justify-content: left;
+    align-items: center;
 }
 .menu ul li{
     width: fit-content;
@@ -47,7 +48,8 @@
     cursor: pointer;
 }
 
-.menu ul > a{
+.menu ul > a,
+.menu ul li a{
     color: #F1EFD6;
     font-size: 1.2vw;
     font-weight: bold;
@@ -64,6 +66,7 @@
     color: #000000;
 }
 
-.menu li:hover > ion-icon{
+.menu li:hover > ion-icon,
+.menu li:hover ion-icon{
     color: #000000;
 }

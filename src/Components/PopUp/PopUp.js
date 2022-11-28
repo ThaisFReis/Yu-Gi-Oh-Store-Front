@@ -20,7 +20,7 @@ export default function PopupWindow() {
 
     return (
         <div className='option' >
-            <Popup trigger={<a>Carrinho</a>} position="bottom left" on="click" offset={offset} style={{ marginTop: "3vh" }} className='popUp'>
+            <Popup trigger={<ion-icon name="cart-outline"></ion-icon>} position="bottom left" on="click" offset={offset} style={{ marginTop: "3vh" }} className='popUp'>
                 {hasItems === false ? 
                 <>
                     <h1>Você ainda não adicionou nada no carrinho</h1>

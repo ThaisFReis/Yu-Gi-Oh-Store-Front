@@ -43,7 +43,7 @@ function SignUp() {
   return (
     <div className="signup">
       <Menu />
-      <h1>Cadastro</h1>
+      <h2>Cadastro</h2>
       <form onSubmit={handleSubmit} >
         <label htmlFor="name">Nome:</label>
         <input type="text" name="name" id="name" placeholder='Digite seu nome' value={name} onChange={e => setName(e.target.value)} />
